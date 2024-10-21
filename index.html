@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Online Shop</h1>
+        <div id="cart">
+            <button onclick="showCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <section id="products">
+        <div class="Pull rond" data-id="1">
+            <img src="C:\Users\Pc\Desktop\images.jpg" alt="Product 1" class="product-img">
+            <h2>Pull rond</h2>
+            <p>Price: $40</p>
+            <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <img src="C:\Users\Pc\Desktop\product2.jpg" alt="Product 2" class="product-img">
+            <h2>Pantalon cargo</h2>
+            <p>Price: $50</p>
+            <button onclick="addToCart(2, 'Product 2', 15)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3">
+            <img src="C:\Users\Pc\Desktop\product3.jpg" alt="Product 3" class="product-img">
+            <h2>Chemise</h2>
+            <p>Price: $35</p>
+            <button onclick="addToCart(3, 'Product 3', 20)">Add to Cart</button>
+        </div>
+    </section>
+
+    <div id="cart-modal" style="display: none;">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="hideCart()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
